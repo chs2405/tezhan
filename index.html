@@ -20,15 +20,5 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-    <script>
-      AFRAME.registerComponent("log", {
-        schema: { type: "string" },
-
-        init: function () {
-          var stringToLog = this.data;
-          console.log(stringToLog);
-        },
-      });
-    </script>
   </body>
 </html>
