@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene log="hi1" embedded arjs vr-mode-ui="enabled: false">
+      <a-marker preset="pattern" type="pattern" url="p.patt">
+        <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+        <a-entity
+          id=""
+          position="0 1 0.5"
+          scale="0.1 0.1 0.1"
+          rotation="0 -90 90"
+          gltf-model="./model/yitianjian.glb"
+          rotation="0 0 0"
+          animation="property: rotation; to: 360 -90 90; loop: true; dur: 10000; easing:linear"
+        >
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
