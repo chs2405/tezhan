@@ -8,7 +8,12 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
-    <a-scene log="hi1" embedded arjs vr-mode-ui="enabled: false">
+    <a-scene
+      log="hi1"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      vr-mode-ui="enabled: false"
+    >
       <a-marker preset="pattern" type="pattern" url="p.patt">
         <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
         <a-entity
